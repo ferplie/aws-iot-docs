@@ -44,7 +44,7 @@ While the app or service is connected to AWS IoT, it can query the current state
 
 When an end user interacts with the app or service to change the state of the device, the app or service can send an HTTP POST request to the URLs of the shadows it uses to update the `desired` state of the shadow\. This request returns the change that was accepted, but you might have to poll the shadow by making HTTP GET requests until the device has updated the shadow with its new state\.
 
-## Detecting a device is connected<a name="thing-connection"></a>
+## Detecting if a device is connected<a name="thing-connection"></a>
 
 To determine if a device is currently connected, include a `connected` property in the shadow document and use an MQTT Last Will and Testament \(LWT\) message to set the `connected` property to `false` if a device is disconnected due to an error\.
 
